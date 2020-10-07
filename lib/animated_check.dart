@@ -25,13 +25,11 @@ class _AnimatedCheckState extends State<AnimatedCheck>
     super.didUpdateWidget(oldWidget);
 
     if (oldWidget.animate != widget.animate) {
-      print(widget.animate);
       if (_isAnimating && !widget.animate) {
         _stop();
       }
       if (!_isAnimating && widget.animate) {
         _start();
-        print(widget.animate);
       }
     }
   }
